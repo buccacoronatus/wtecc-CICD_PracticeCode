@@ -1,0 +1,12 @@
+name : CI workflows
+on: 
+  push:
+   branches: ["main"]
+  pull_request:
+    branches: ["main"]
+    # when a push or pull request is performed on main branch
+jobs: # job will run on ubuntu lates runner when before defined step is reached
+  build:
+    runs-on: ubuntu-latest
+    container: python:3.9-slim
+    
